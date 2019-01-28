@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: app-proxy-server
+
+server:
+  port: 7777
+
+zuul:
+  routes:
+    string:
+      path: /test/**
+      serviceId: app-discovery
+
+ribbon:
+  eureka:
+    enabled: true
